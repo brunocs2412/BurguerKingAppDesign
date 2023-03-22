@@ -1,0 +1,379 @@
+*{
+    margin: 0; padding: 0; border:0; box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "burguerKingMayus";
+    src: url("/fonts/PassionOne-Bold.ttf");
+}
+
+@font-face {
+    font-family: "burguerKingMin";
+    src: url("/fonts/PassionOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "yanoneMin";
+    src: url("/fonts/YanoneKaffeesatz-VariableFont_wght.ttf");
+}
+
+:root{
+    --colorPrincipal1: rgb(255,127,0);
+    --colorPrincipal2: rgb(255,0,0);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+main{
+    background-color: black;
+    margin: 0 auto;
+}
+
+body{
+    background-color: white;
+}
+
+h1, h2{
+    font-family: "burguerKingMayus";
+    letter-spacing: 1px;
+}
+
+h1{
+    font-size: 70px;
+}
+
+
+h3{
+    font-family: "burguerKingMin";
+    font-size: 19px;
+}
+
+h4{
+    font-family: "yanoneMin";
+    letter-spacing: 0.5px;
+    font-size: 17px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-family: "burguerKingMayus";
+    letter-spacing: 1px;
+}
+
+/*----- Header ----- */
+
+header{
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header figure, header nav{
+    width: 600px;
+}
+
+header figure{
+    text-align: left;
+}
+
+header figure img{
+    height: 100px;
+    padding: 5px;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header nav ul li{
+    justify-items: end;
+    margin-left: 70px;
+}
+
+header nav ul a{
+    color: black;
+    letter-spacing: 2px;
+    font-family: "burguerKingMayus";
+    font-size: 20px;
+}
+
+header nav ul a:hover{
+    color: var(--colorPrincipal2);
+}
+
+
+/*----- Cabezal ----- */
+
+#cabezal1{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: url(/img/burger-king-background-4a8ab037-6038-4306-bd09-cf0449a63bfc.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;  
+    color: white;
+}
+
+#cabezal1 a{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 180px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: solid 2px white;
+    background-color:var(--colorPrincipal1);
+    border-radius: 20px;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+#cabezal1 a:hover{
+    border: var(--colorPrincipal1) solid 2px;
+    background-color: var(--colorPrincipal2);
+}
+
+/*----- Categorías ----- */
+
+#categorias {
+    justify-content: center;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(8, 150px);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: black;
+}
+
+#categorias figure img{
+    background-color: var(--colorPrincipal2);
+    border-radius: 50%;
+    border: 3px black solid;
+    height: 100px;
+    padding: 5px;
+}
+
+#categorias figure img:hover{
+    background-color: var(--colorPrincipal1);
+    border-radius: 50%;
+    border: 3px var(--colorPrincipal2) solid;
+}
+
+#categorias article:hover{
+    color: var(--colorPrincipal2);
+}
+
+
+/*----- Menú ----- */
+#Menu{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    grid-template-rows: 30px 360px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#h2Menu{
+    grid-column: 1/5;
+    grid-row:1/2;
+    text-align: left;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+}
+
+#Menu img{
+    padding: 1px;
+    width: auto;
+    height: 260px;
+}
+
+#Menu article :nth-of-type(1){
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin-right: 5px;
+}
+
+#Menu article :nth-of-type(2){
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin-right: 5px;
+
+}
+
+#Menu article :nth-of-type(3){
+    grid-row: 2/3;
+    grid-column: 3/4;
+    margin-right: 5px;
+}
+
+#Menu article h4{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#Menu ul{
+    grid-row: 2/3;
+    grid-column: 4/5;
+    text-align: left;
+    margin: 0 auto;
+    list-style-image: url("/img/corona.png");
+    
+}
+
+/*----- Fotos ----- */
+
+#Fotos{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,380px);
+    grid-template-rows: 30px 250px 250px;
+    grid-row-gap: 15px;
+    grid-column-gap: 30px;
+    margin-bottom: 40px;
+}
+
+#Fotos img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Fotos figure:nth-of-type(1){
+    grid-row: 2/4;
+    grid-column: 1/2;
+}
+
+#Fotos figure:nth-of-type(2){
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+#Fotos figure:nth-of-type(3){
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+#Fotos figure:nth-of-type(4){
+    grid-row: 2/4;
+    grid-column: 3/4;
+}
+
+/*----- Formulario ----- */
+
+#formulario{
+    background-color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#formulario h2{
+    width: 240px;
+    color: white;
+    display: block;
+    text-align: left;
+    letter-spacing: 5px;
+}
+
+form{
+    background-color: black;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+}
+
+form input, select, textarea{
+    display: block;
+    border: 2px solid white;
+    width: 480px;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: transparent;
+    color: white;
+}
+
+form select optgroup{
+    color: black;
+}
+
+input[type="submit"]{
+    background-color: var(--colorPrincipal1);
+    color: white;
+    width: 100px;
+    border-radius: 40px;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--colorPrincipal2);
+    color: white;
+}
+
+input::placeholder{
+    color: grey;
+}
+
+textarea::placeholder{
+    color: grey;
+}
+
+#formulario figure{
+    display: block;
+    background-color: black;
+    width: 480px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    text-align: end;
+}
+
+/*----- Footer ----- */
+
+footer{
+    text-align: center;
+}
+
+footer ul{
+    display:flex;
+    list-style: none;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
+
+}
+
+footer li{
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/iconos.png");
+}
+
+#instagram{
+    background-position: 0 0;
+}
+
+#facebook{
+    background-position: 32px 0;
+}
+
+#instagram:hover{
+    background-position: 0 -42px;
+}
+
+#facebook:hover{
+    background-position: -42px -42px;
+}
